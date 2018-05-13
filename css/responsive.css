@@ -12,6 +12,10 @@
     .header-area {
         padding-top: 80px;
     }
+    .row {
+        padding-right: 0px;
+        margin-right: 0px;
+    },
     .price-table,
     .box {
         padding: 30px 15px;
@@ -37,18 +41,22 @@
 
 /* Mobile Layout: 320px. */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
     body {
-        font-size: 13px;
+        font-size: 12px;
     }
     .header-area {
         padding-top: 120px;
         padding-bottom: 100px;
         height: auto;
-    }
+    },
+    .row {
+        padding-right: 0px;
+        margin-right: 0px;
+    },
     .page-title h2,
     .header-text h2 {
-        font-size: 20px;
+        font-size: 16px;
     }
     .mainmenu-area .navbar-toggle {
         margin-top: 20px;
@@ -65,7 +73,7 @@
         margin: 0;
     }
     .mainmenu-area #primary-menu > ul > li > a {
-        padding: 15px;
+        padding: 12px;
         overflow: hidden;
     }
     .box {
@@ -93,7 +101,3 @@
     }
 }
 
-
-/* Wide Mobile Layout: 480px. */
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
