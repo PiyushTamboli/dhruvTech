@@ -9,6 +9,14 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.typeit/3.0.1/typeit.min.js"></script>
+  <script>
+  $(document).ready(function(){
+	$('.typeit-box').typeIt({
+		speed: 160
+	});
+});
+	</script>
   <style>
   body {
       font: 20px Montserrat, sans-serif;
@@ -34,8 +42,8 @@
       color: #fff;
   }
   .container-fluid {
-      padding-top: 70px;
-      padding-bottom: 70px;
+      padding-top: 15px;
+      padding-bottom: 15px;
   }
   .navbar {
       padding-top: 15px;
@@ -49,7 +57,35 @@
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
+  .parallax {
+    /* The image used */
+    background-image: url("https://scontent-lht6-1.cdninstagram.com/vp/5b838564980c667606a68d1add8c8559/5B83E172/t51.2885-15/s640x640/sh0.08/e35/30590349_554210788312248_4957285269184184320_n.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax2 {
+    /* The image used */
+    background-image: url("https://scontent-lht6-1.cdninstagram.com/vp/3124b2ab3090ff1dd587c6543d3a85db/5B7B7ACB/t51.2885-15/s640x640/sh0.08/e35/29404355_2114358272141238_4084203771792457728_n.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	color: LawnGreen ;
+}
   </style>
+	
 </head>
 <body>
 
@@ -62,7 +98,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Me</a>
+      <a class="navbar-brand" href="#">Akhilesh Gurav</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -75,16 +111,16 @@
 </nav>
 
 <!-- First Container -->
-<div class="container-fluid bg-1 text-center">
+<div class="container-fluid bg-1 text-center parallax">
   <h3 class="margin">Who Am I?</h3>
   <img src="https://scontent-lht6-1.cdninstagram.com/vp/b97a92dd65e78d8d6018a1b8f6c1b4be/5B87CB55/t51.2885-15/s640x640/sh0.08/e35/20836870_1894338527558856_9071137367724654592_n.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-  <h3>I'm an adventurer</h3>
+  <h3 class="typeit-box">I'm an adventurer, an explorer who wants to discover myself.</h3>
 </div>
 
 <!-- Second Container -->
 <div class="container-fluid bg-2 text-center">
   <h3 class="margin">What Am I?</h3>
-  <p>I am a photographer, a devotee, a person who love whatver I do. </p>
+  <p>I am a photographer, a devotee, a person who love whatever I do. </p>
   
 <div class="container">  
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -93,6 +129,8 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+	  <li data-target="#myCarousel" data-slide-to="3"></li>
+	  <li data-target="#myCarousel" data-slide-to="4"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -108,6 +146,12 @@
       <div class="item">
         <img src="https://scontent-lht6-1.cdninstagram.com/vp/1ad42fc2cf06ad42c60c870617abec5e/5B88E788/t51.2885-15/s750x750/sh0.08/e35/17332782_436709306664645_7501013820999991296_n.jpg" alt="New york" style="width:100%;">
       </div>
+	 <div class="item">
+        <img src="https://scontent-lht6-1.cdninstagram.com/vp/25e0ca004b9f8cbf25e39ffa26b1af36/5B99BCC6/t51.2885-15/s640x640/sh0.08/e35/20688504_1279185582207872_6357864552402518016_n.jpg" alt="Luxembourg" style="width:100%;">
+      </div> 
+	  <div class="item">
+        <img src="https://scontent-lht6-1.cdninstagram.com/vp/c264818e16bbe9b950b47bc2bf046b02/5BA0B74A/t51.2885-15/s750x750/sh0.08/e35/29738611_1506071459503300_8009889887056560128_n.jpg" alt="Luxembourg" style="width:100%;">
+      </div> 
     </div>
 
     <!-- Left and right controls -->
@@ -125,7 +169,7 @@
 </div>
 
 <!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center">    
+<div class="container-fluid bg-3 text-center parallax2">    
   <h3 class="margin">What I Love Doing</h3><br>
   <div class="row">
     <div class="col-sm-4">
@@ -145,7 +189,7 @@
 
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
-  <p>Theme Made By <a href="https://piyushtamboli.github.io/dhruvTech/">dhruvTech</a></p> 
+	<p>Theme Made By <a href="https://piyushtamboli.github.io/dhruvTech/">dhruvTech</a></p> 
 </footer>
 
 </body>
