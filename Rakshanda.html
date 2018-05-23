@@ -12,7 +12,6 @@
 
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-
 </style>
 <script>
 function renderWordCloud() {
@@ -49,7 +48,6 @@ window.onload = renderWordCloud;
 angular.module('myModule', [])
     		.controller('myController', function ($scope) {
 				
-
 Highcharts.chart('chart', {
     chart: {
         type: 'spline'
@@ -76,7 +74,6 @@ Highcharts.chart('chart', {
     	headerFormat: '{series.name}<br>',
        pointFormat: '{point.name} in {point.x}'
     },
-
     plotOptions: {
         spline: {
             marker: {
@@ -84,7 +81,6 @@ Highcharts.chart('chart', {
             }
         }
     },
-
     series: [ {
         name: " ",
         data: [
@@ -110,8 +106,18 @@ Highcharts.chart('chart', {
     }
 },
 {
-    x: Date.UTC(2017, 9, 31),
-    y: 7,
+    x: Date.UTC(2016, 12, 31),
+    y: 9,
+    name: "got selected in KSCST",
+    dataLabels: {
+      enabled: true,
+      format: 'First Prize in Sports',
+      verticalAlign: 'bottom'
+    }
+},
+{
+    x: Date.UTC(2017, 2, 31),
+    y: 8.5,
     name: "got selected in KSCST",
     dataLabels: {
       enabled: true,
@@ -121,7 +127,7 @@ Highcharts.chart('chart', {
 },
 {
     x: Date.UTC(2017, 9, 31),
-    y: 7,
+    y: 7.5,
     name: "got sponsership",
     dataLabels: {
       enabled: true,
@@ -149,8 +155,6 @@ Highcharts.chart('chart', {
       verticalAlign: 'bottom'
     }
 }
-
-
             ]
     }]
 });
@@ -173,7 +177,7 @@ Highcharts.chart('chart', {
         <div class="w3-display-container">
           <img src="https://scontent-lht6-1.cdninstagram.com/vp/b97a92dd65e78d8d6018a1b8f6c1b4be/5B87CB55/t51.2885-15/s640x640/sh0.08/e35/20836870_1894338527558856_9071137367724654592_n.jpg" style="width:100%" alt="Avatar">
           <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2 style="color:gold">Akhilesh Gurav</h2>
+            <div class="w3-large" style="color:gold">Akhilesh Gurav</div>
           </div>
         </div>
         <div class="w3-container w3-margin-bottom">
@@ -182,7 +186,7 @@ Highcharts.chart('chart', {
           <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>guravraksh22@gmail.com</p>
           <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+91-7972532508</p>
 		  <hr>
-		  <p> Social media connections &nbsp;
+		  <p>Connections &nbsp;
 			<a class="fa fa-github w3-hover-opacity w3-margin-right w3-large w3-text-teal" href="https://github.com/PiyushTamboli"></a>
 			<a class="fa fa-instagram w3-hover-opacity w3-margin-right w3-large w3-text-teal" href="https://www.instagram.com/akhilgurav99/?hl=en"></a>
 			<a class="fa fa-linkedin w3-hover-opacity w3-margin-right w3-large w3-text-teal" href="https://www.linkedin.com/in/piyush-tamboli-87aaa88b/"></a>
@@ -238,7 +242,7 @@ Highcharts.chart('chart', {
     </div>
 
     <!-- Right Column -->
-    <div class="w3-rest">
+    <div class="w3-threequarter">
     
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
@@ -254,7 +258,7 @@ Highcharts.chart('chart', {
           <p>“Airtificial Intelligence Chatbot to make Best Decision for Customer to Provide Service” got Selected and Sponsered by KSCST 41st Series of SPP 2017-18. Also done a MiniProject “Leaping Dinosaur” and developed a project on “Artificial Intelligence Chabot” which is selected for KSCST.</p>
           <hr>
         </div>
-        
+      </div>  
       <div class="w3-container w3-card w3-white w3-margin-bottom">
 	  <div id="wordCloud"></div>
 	  </div>
