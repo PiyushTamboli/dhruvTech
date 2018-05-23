@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<title>Akhilesh Gurav</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+</style>
+<script>
+function renderWordCloud() {
+var text = 'jQuery angularJs expressJs nodeJs bootstrapJs springBoot webDesign C C++ Java mySQL Linux Android heroku cloudHosting UI UX responsive CSS HTML5';
+var lines = text.split(/[,. ]+/g),
+  data = Highcharts.reduce(lines, function (arr, word) {
+    var obj = Highcharts.find(arr, function (obj) {
+      return obj.name === word;
+    });
+    if (obj) {
+      obj.weight += 1;
+    } else {
+      obj = {
+        name: word,
+        weight: 1
+      };
+      arr.push(obj);
+    }
+    return arr;
+  }, []);
+//console.log("PK");
+Highcharts.chart('wordCloud', {
+  series: [{
+    type: 'wordcloud',
+    data: data,
+    name: 'Profeciency'
+  }],
+  title: {
+    text: 'Wordcloud of keywords'
+  }
+});
+}
+window.onload = renderWordCloud;
+angular.module('myModule', [])
+    		.controller('myController', function ($scope) {
+				
+
+Highcharts.chart('chart', {
+    chart: {
+        type: 'spline'
+    },
+	credits: {
+      enabled: false
+	},
+    title: {
+        text: 'Carrear'
+    },
+    xAxis: {
+        type: 'datetime',
+		dateTimeLabelFormats: { // don't display the dummy year
+            month: '%Y'
+        },
+        title: {
+            text: 'Year'
+        }
+    },
+    yAxis: {
+        visible:false
+    },
+    tooltip: {
+    	headerFormat: '{series.name}<br>',
+       pointFormat: '{point.name} in {point.x}'
+    },
+
+    plotOptions: {
+        spline: {
+            marker: {
+                enabled: true
+            }
+        }
+    },
+
+    series: [ {
+        name: " ",
+        data: [
+        
+{
+    x: Date.UTC(2012, 9, 31),
+    y: 6,
+    name: "with distinction",
+    dataLabels: {
+      enabled: true,
+      format: 'X',
+      verticalAlign: 'bottom'
+    }
+},
+{
+    x: Date.UTC(2014, 9, 31),
+    y: 5,
+    name: "still first class",
+    dataLabels: {
+      enabled: true,
+      format: 'XII',
+      verticalAlign: 'bottom'
+    }
+},
+{
+    x: Date.UTC(2017, 9, 31),
+    y: 7,
+    name: "got selected in KSCST",
+    dataLabels: {
+      enabled: true,
+      format: 'Mini Project',
+      verticalAlign: 'bottom'
+    }
+},
+{
+    x: Date.UTC(2017, 9, 31),
+    y: 7,
+    name: "got sponsership",
+    dataLabels: {
+      enabled: true,
+      format: 'Final Year Project',
+      verticalAlign: 'bottom'
+    }
+},
+{
+    x: Date.UTC(2018, 4, 21),
+    y: 8,
+    name: "with first class",
+    dataLabels: {
+      enabled: true,
+      format: 'B E',
+      verticalAlign: 'bottom'
+    }
+},
+{
+    x: Date.UTC(2018, 10, 29),
+    y: 8,
+    name: "joined Dhruv Tech",
+    dataLabels: {
+      enabled: true,
+      format: 'First Job',
+      verticalAlign: 'bottom'
+    }
+}
+
+
+            ]
+    }]
+});
+    		});
+		
+		
+</script>
+<body class="w3-light-grey" ng-controller="myController" >
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-quarter">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="https://scontent-lht6-1.cdninstagram.com/vp/b97a92dd65e78d8d6018a1b8f6c1b4be/5B87CB55/t51.2885-15/s640x640/sh0.08/e35/20836870_1894338527558856_9071137367724654592_n.jpg" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2 style="color:gold">Akhilesh Gurav</h2>
+          </div>
+        </div>
+        <div class="w3-container w3-margin-bottom">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Software Engineer</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>KEB Colony, Chikodi, Belagavi, Karnataka</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>guravraksh22@gmail.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+91-7972532508</p>
+		  <hr>
+		  <p> Social media connections &nbsp;
+			<a class="fa fa-github w3-hover-opacity w3-margin-right w3-large w3-text-teal" href="https://github.com/PiyushTamboli"></a>
+			<a class="fa fa-instagram w3-hover-opacity w3-margin-right w3-large w3-text-teal" href="https://www.instagram.com/akhilgurav99/?hl=en"></a>
+			<a class="fa fa-linkedin w3-hover-opacity w3-margin-right w3-large w3-text-teal" href="https://www.linkedin.com/in/piyush-tamboli-87aaa88b/"></a>
+		  </p>
+          <hr>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+          <p>Front end techologies</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+          </div>
+          <p>Node Js</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+              <div class="w3-center w3-text-white">80%</div>
+            </div>
+          </div>
+          <p>Cloud Hosting</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+          </div>
+		  <p>Programming</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+          </div>
+          <p>Photography</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">80%</div>
+          </div>
+          <br>
+
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+          <p>
+			  <span class="w3-margin-right">English</span>
+			  <span class="w3-small w3-text-teal w3-margin-right">Intermediate</span><i class="fa fa-thumbs-up" aria-hidden="true"></i>
+		  </p>
+		  <p>
+			  <span class="w3-margin-right">Marathi</span>
+			  <span class="w3-small w3-text-teal w3-margin-right">Native</span><i class="fa fa-trophy" aria-hidden="true"></i>
+          </p>
+		  <p>
+			  <span class="w3-margin-right">Hindi</span>
+			  <span class="w3-small w3-text-teal w3-margin-right">Advanced</span><i class="fa fa-thumbs-up" aria-hidden="true"></i>
+		  </p>
+		  <p>
+			  <span class="w3-margin-right">Kannada</span>
+			  <span class="w3-small w3-text-teal w3-margin-right">Native</span><i class="fa fa-trophy" aria-hidden="true"></i>
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-rest">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Front End Developer / Dhruv Tech</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2018 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+          <p>Dhruv Tech is a start up which deals with providing services on cloud for small and micro businesses. It provides cloud hosted services in SAAS model. My job profile includes creating end to end solution using AngularJs, NodeJs, Bootstrap, CSS, HTML5, Heroku, REST services using Java Spring Boot and ExpressJs</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Software Engineer / Final Year Project</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>July 2017 - Mar 2018</h6>
+          <p>“Airtificial Intelligence Chatbot to make Best Decision for Customer to Provide Service” got Selected and Sponsered by KSCST 41st Series of SPP 2017-18. Also done a MiniProject “Leaping Dinosaur” and developed a project on “Artificial Intelligence Chabot” which is selected for KSCST.</p>
+          <hr>
+        </div>
+        
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+	  <div id="wordCloud"></div>
+	  </div>
+	  <div class="w3-container w3-card w3-white w3-margin-bottom">
+		<div id="chart">Placeholder for chart</div>
+	  </div>
+	  
+
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Dhruv Tech</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018 - </h6>
+          <p>Post Graduate Diploma</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>KLE College of Engineering & Technology Chikodi</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2014 - 2018</h6>
+          <p>Bachelor Degree with 57% Aggregate</p><br>
+        </div>
+		<div class="w3-container">
+          <h5 class="w3-opacity"><b>BK College of Chikodi</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2014</h6>
+          <p>XII with 63.66%</p><br>
+        </div>
+		<div class="w3-container">
+          <h5 class="w3-opacity"><b>GSES English Medium College Chikodi</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2011 - 2012</h6>
+          <p>X with 83.36%</p><br>
+        </div>
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<!--footer class="w3-container w3-teal w3-center w3-margin-top">
+  
+</footer-->
+
+</body>
+</html>
