@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myModule">
+<html ng-app="myModule" ng-controller="myController">
 <title>Akhilesh Gurav</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +15,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </style>
 <script>
 function renderWordCloud() {
-var text = 'jQuery angularJs expressJs nodeJs bootstrapJs springBoot webDesign C C++ Java mySQL Linux Android heroku cloudHosting UI UX responsive CSS HTML5';
+var text = 'jQuery angularJs expressJs nodeJs bootstrapJs springBoot gitHub heroku webDesign C C++ Java mySQL Linux Android heroku cloudHosting UI UX responsive CSS HTML5';
 var lines = text.split(/[,. ]+/g),
   data = Highcharts.reduce(lines, function (arr, word) {
     var obj = Highcharts.find(arr, function (obj) {
@@ -45,9 +45,108 @@ Highcharts.chart('wordCloud', {
 });
 }
 window.onload = renderWordCloud;
-angular.module('myModule', [])
-    		.controller('myController', function ($scope) {
-				
+var app=angular.module('myModule', []);
+    		app.controller('myController', function ($scope) {
+$scope.test = function(val) {
+	return "width:"+val+"%"
+}
+$scope.student={
+name:"Akhilesh Gurav",
+designation:"Software Engineer",
+address:"KEB Colony, Chikodi, Belagavi, Karnataka",
+email:"guravraksh22@gmail.com",
+phone:"+91-7972532508",
+connections:{
+	github:"https://github.com/PiyushTamboli",
+	linkedIn:"https://www.linkedin.com/in/piyush-tamboli-87aaa88b/",
+	instagram:"https://www.instagram.com/akhilgurav99/?hl=en"
+	},
+skills:{
+	"Front end techologies":90,
+	"Node Js":80,
+	"Cloud Hosting":75,
+	Programming: 70,
+	Photography:90
+	},
+languages:{
+	English:"Intermediate",
+	Hindi:"Intermediate",
+	Marathi:"Native",
+	Kannada:"Native"
+},
+projects:[{
+	title:"Front End Developer",
+	organization:"Dhruv Tech",
+	since:"June 2018",
+	to:"",
+	description:"Dhruv Tech is a start up which deals with providing services on cloud for small and micro businesses. It provides cloud hosted services in SAAS model. My job profile includes creating end to end solution using AngularJs, NodeJs, Bootstrap, CSS, HTML5, Heroku, REST services using Java Spring Boot and ExpressJs"
+	},{
+	title:"Software Engineer",
+	organization:"Final Year Project",
+	since:"July 2017",
+	to:"Mar 2018",
+	description:"“Airtificial Intelligence Chatbot to make Best Decision for Customer to Provide Service” got Selected and Sponsered by KSCST 41st Series of SPP 2017-18. Also done a MiniProject “Leaping Dinosaur” and developed a project on “Artificial Intelligence Chabot” which is selected for KSCST."
+	}],
+educationDetails:[{
+	institute:"Dhruv Tech",
+	since:"June 2018",
+	to:"",
+	description:"Post Graduate Diploma"
+	},{
+	institute:"KLE College of Engineering & Technology Chikodi",
+	since:"2014",
+	to:"2018",
+	description:"Bachelor Degree with 57% Aggregate"
+	},{
+	institute:"BK College of Chikodi",
+	since:"2013",
+	to:"2014",
+	description:"Higher secondary school certificate (XII) with 63.66%"
+	},{
+	institute:"GSES English Medium College Chikodi",
+	since:"2011",
+	to:"2012",
+	description:"Higher secondary school certificate (XII) with 63.66%"
+	}],
+milestones:[{
+	when:Date.UTC(2012, 9, 31),
+	what:"X",
+	howMuch:6,
+	details:"with distinction"
+	},{
+	when:Date.UTC(2014, 9, 31),
+	what:"XII",
+	howMuch:5,
+	details:"still first class"
+	},{
+	when:Date.UTC(2016, 12, 31),
+	what:"First Prize in Sports",
+	howMuch:9,
+	details:"got selected in KSCST"
+	},{
+	when:Date.UTC(2017, 2, 28),
+	what:"Mini Project",
+	howMuch:8.5,
+	details:"got selected in KSCST"
+	},{
+	when:Date.UTC(2017, 9, 29),
+	what:"Final Year Project",
+	howMuch:8.5,
+	details:"got sponsership"
+	},{
+	when:Date.UTC(2018, 4, 29),
+	what:"B E",
+	howMuch:8.5,
+	details:"with first class"
+	},{
+	when:Date.UTC(2018, 10, 29),
+	what:"Final Job",
+	howMuch:9.2,
+	details:"joined Dhruv Tech"
+	}]
+};
+var milestones = [];
+			
 Highcharts.chart('chart', {
     chart: {
         type: 'spline'
@@ -56,7 +155,7 @@ Highcharts.chart('chart', {
       enabled: false
 	},
     title: {
-        text: 'Carrear'
+        text: 'Career'
     },
     xAxis: {
         type: 'datetime',
@@ -158,11 +257,16 @@ Highcharts.chart('chart', {
             ]
     }]
 });
-    		});
+//console.log($scope.student);
+ });
 		
-		
+app.directive("w3TestDirective", function() {
+    return {
+        template : "<a ng-repeat='(key, value) in "+student.connections+"' class='fa fa-github w3-hover-opacity w3-margin-right w3-large w3-text-teal' href='value'></a>"
+    };
+});		
 </script>
-<body class="w3-light-grey" ng-controller="myController" >
+<body class="w3-light-grey" >
 
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
@@ -177,64 +281,40 @@ Highcharts.chart('chart', {
         <div class="w3-display-container">
           <img src="https://scontent-lht6-1.cdninstagram.com/vp/b97a92dd65e78d8d6018a1b8f6c1b4be/5B87CB55/t51.2885-15/s640x640/sh0.08/e35/20836870_1894338527558856_9071137367724654592_n.jpg" style="width:100%" alt="Avatar">
           <div class="w3-display-bottomleft w3-container w3-text-black">
-            <div class="w3-large" style="color:gold">Akhilesh Gurav</div>
+            <div class="w3-large" style="color:gold">{{student.name}}</div>
           </div>
+		  
         </div>
-        <div class="w3-container w3-margin-bottom">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Software Engineer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>KEB Colony, Chikodi, Belagavi, Karnataka</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>guravraksh22@gmail.com</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+91-7972532508</p>
+		<div class="w3-container w3-margin-bottom">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>{{student.designation}}</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>{{student.address}}</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>{{student.email}}</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>{{student.phone}}</p>
 		  <hr>
+		  
 		  <p>Connections &nbsp;
-			<a class="fa fa-github w3-hover-opacity w3-margin-right w3-large w3-text-teal" href="https://github.com/PiyushTamboli"></a>
-			<a class="fa fa-instagram w3-hover-opacity w3-margin-right w3-large w3-text-teal" href="https://www.instagram.com/akhilgurav99/?hl=en"></a>
-			<a class="fa fa-linkedin w3-hover-opacity w3-margin-right w3-large w3-text-teal" href="https://www.linkedin.com/in/piyush-tamboli-87aaa88b/"></a>
+			<a class="fa fa-github w3-hover-opacity w3-margin-right w3-large w3-text-teal" href="{{student.connections.github}}"></a>
+			<a class="fa fa-instagram w3-hover-opacity w3-margin-right w3-large w3-text-teal" href="{{student.connections.instagram}}"></a>
+			<a class="fa fa-linkedin w3-hover-opacity w3-margin-right w3-large w3-text-teal" href="{{student.connections.linkedIn}}"></a>
 		  </p>
           <hr>
 
           <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-          <p>Front end techologies</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
-          </div>
-          <p>Node Js</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
-              <div class="w3-center w3-text-white">80%</div>
-            </div>
-          </div>
-          <p>Cloud Hosting</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-          </div>
-		  <p>Programming</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-          </div>
-          <p>Photography</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">80%</div>
-          </div>
+          <div ng-repeat="(key, value) in student.skills">
+			  <p>{{key}}</p>
+			  <div class="w3-light-grey w3-round-xlarge w3-small">
+				<div class="w3-container w3-center w3-round-xlarge w3-teal" style="{{test(value)}}">{{value}}%</div>
+			  </div>
+		  </div>
+          
           <br>
 
           <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-          <p>
-			  <span class="w3-margin-right">English</span>
-			  <span class="w3-small w3-text-teal w3-margin-right">Intermediate</span><i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          <p ng-repeat="(key, value) in student.languages">
+			  <span class="w3-margin-right">{{key}}</span>
+			  <span class="w3-small w3-text-teal w3-margin-right">{{value}}</span><i class="fa fa-thumbs-up" aria-hidden="true"></i>
 		  </p>
-		  <p>
-			  <span class="w3-margin-right">Marathi</span>
-			  <span class="w3-small w3-text-teal w3-margin-right">Native</span><i class="fa fa-trophy" aria-hidden="true"></i>
-          </p>
-		  <p>
-			  <span class="w3-margin-right">Hindi</span>
-			  <span class="w3-small w3-text-teal w3-margin-right">Advanced</span><i class="fa fa-thumbs-up" aria-hidden="true"></i>
-		  </p>
-		  <p>
-			  <span class="w3-margin-right">Kannada</span>
-			  <span class="w3-small w3-text-teal w3-margin-right">Native</span><i class="fa fa-trophy" aria-hidden="true"></i>
-          <br>
+		  <br>
         </div>
       </div><br>
 
@@ -246,49 +326,29 @@ Highcharts.chart('chart', {
     
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Front End Developer / Dhruv Tech</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2018 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-          <p>Dhruv Tech is a start up which deals with providing services on cloud for small and micro businesses. It provides cloud hosted services in SAAS model. My job profile includes creating end to end solution using AngularJs, NodeJs, Bootstrap, CSS, HTML5, Heroku, REST services using Java Spring Boot and ExpressJs</p>
+        <div ng-repeat="project in student.projects" class="w3-container">
+          <h5 class="w3-opacity"><b>{{project.title}} / {{project.organization}}</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{project.since}} - {{project.to}}<span ng-show="project.to == ''" class='w3-tag w3-teal w3-round'>Current</span></h6>
+          <p>{{project.description}}</p>
           <hr>
         </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Software Engineer / Final Year Project</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>July 2017 - Mar 2018</h6>
-          <p>“Airtificial Intelligence Chatbot to make Best Decision for Customer to Provide Service” got Selected and Sponsered by KSCST 41st Series of SPP 2017-18. Also done a MiniProject “Leaping Dinosaur” and developed a project on “Artificial Intelligence Chabot” which is selected for KSCST.</p>
-          <hr>
-        </div>
+        
       </div>  
       <div class="w3-container w3-card w3-white w3-margin-bottom">
 	  <div id="wordCloud"></div>
 	  </div>
 	  <div class="w3-container w3-card w3-white w3-margin-bottom">
-		<div id="chart">Placeholder for chart</div>
+		<div id="chart">chart</div>
 	  </div>
 	  
 
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Dhruv Tech</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018 - </h6>
-          <p>Post Graduate Diploma</p>
+        <div ng-repeat="educationItem in student.educationDetails" class="w3-container">
+          <h5 class="w3-opacity"><b>{{educationItem.institute}}</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{educationItem.since}} - {{educationItem.to}}</h6>
+          <p>{{educationItem.description}}</p>
           <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>KLE College of Engineering & Technology Chikodi</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2014 - 2018</h6>
-          <p>Bachelor Degree with 57% Aggregate</p><br>
-        </div>
-		<div class="w3-container">
-          <h5 class="w3-opacity"><b>BK College of Chikodi</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2014</h6>
-          <p>XII with 63.66%</p><br>
-        </div>
-		<div class="w3-container">
-          <h5 class="w3-opacity"><b>GSES English Medium College Chikodi</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2011 - 2012</h6>
-          <p>X with 83.36%</p><br>
         </div>
       </div>
 
