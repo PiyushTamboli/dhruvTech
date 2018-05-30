@@ -267,10 +267,11 @@
                         <br>
 						<p class="w3-large w3-text-theme"><b><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-text-teal"></i>Education</b></p>
 						<div ng-repeat="educationItem in student.educationDetails">
+						<hr>
                         <p><b>{{educationItem.institute}}</b></p>
                         <p class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{educationItem.since}} - {{educationItem.to}}</p>
                         <p>{{educationItem.description}}</p>
-                        <hr>
+                        
                     </div>
                     </div>
                 </div><br>
@@ -284,16 +285,16 @@
             <div class="w3-threequarter">
 
                 <div class="w3-container w3-card w3-white w3-margin-bottom">
-                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+                    <h3 class="w3-text-grey w3-padding-8"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xlarge w3-text-teal"></i>Work Experience</h3>
                     <div ng-repeat="project in student.projects" class="w3-container">
+						<hr>
                         <h5 class="w3-opacity"><b>{{project.title}} / {{project.organization}}</b></h5>
                         <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{project.since}} - {{project.to}}<span ng-show="project.to == ''" class='w3-tag w3-teal w3-round'>Current</span></h6>
                         <p>{{project.description}}</p>
-						Hosted Project Links
+						<p ng-show="project.links">Hosted Project Links</p>
 						<ul><li ng-repeat="(key, value) in project.links">
 							<a class="w3-margin-right w3-text-teal" href="{{value}}">{{key}}</a>
 						</li></ul>
-                        <hr>
                     </div>
 
                 </div>
