@@ -1,0 +1,104 @@
+{
+            name: "Akhilesh Gurav",
+            profileImageLink: "https://scontent-lht6-1.cdninstagram.com/vp/b97a92dd65e78d8d6018a1b8f6c1b4be/5B87CB55/t51.2885-15/s640x640/sh0.08/e35/20836870_1894338527558856_9071137367724654592_n.jpg",
+            designation: "Software Engineer",
+            address: "KEB Colony, Chikodi, Belagavi, Karnataka",
+            email: "guravraksh22@gmail.com",
+            phone: "+91-7972532508",
+            connections: {
+                github: "https://github.com/PiyushTamboli",
+                linkedin: "https://www.linkedin.com/in/piyush-tamboli-87aaa88b/",
+                instagram: "https://www.instagram.com/akhilgurav99/?hl=en"
+            },
+            skills: {
+                "Front end techologies": 90,
+                "Node Js": 80,
+                "Cloud Hosting": 75,
+                Programming: 70,
+                Photography: 90
+            },
+            keywords: "angularJs expressJs nodeJs bootstrapJs springBoot gitHub heroku webDesign C C++ Java mySQL Linux Android heroku cloudHosting UI UX responsive CSS HTML5",
+            languages: {
+                English: "Intermediate",
+                Hindi: "Intermediate",
+                Marathi: "Native",
+                Kannada: "Native"
+            },
+            projects: [{
+                title: "Front End Developer",
+                organization: "Dhruv Tech",
+                since: "June 2018",
+                to: "",
+                description: "Dhruv Tech is a start up which deals with providing services on cloud for small and micro businesses. It provides cloud hosted services in SAAS model. My job profile includes creating end to end solution using AngularJs, NodeJs, Bootstrap, CSS, HTML5, Heroku, REST services using Java Spring Boot and ExpressJs",
+				links:{
+					myAngularCV:"https://piyushtamboli.github.io/dhruvTech/Rakshanda.html", 
+					jQueryRestBuzzerApp:"https://my-buzzer.herokuapp.com/",
+					bootstrapWebsite:"https://piyushtamboli.github.io/dhruvTech/",
+					googleSite:"https://sites.google.com/view/dhruvtech",
+					googleFormApp: "https://goo.gl/forms/AIEWgzPz9oLVIXUw1"
+				},
+            }, {
+                title: "Software Engineer",
+                organization: "Final Year Project",
+                since: "July 2017",
+                to: "Mar 2018",
+                description: "“Airtificial Intelligence Chatbot to make Best Decision for Customer to Provide Service” got Selected and Sponsered by KSCST 41st Series of SPP 2017-18. Also done a MiniProject “Leaping Dinosaur” and developed a project on “Artificial Intelligence Chabot” which is selected for KSCST."
+            }],
+            educationDetails: [{
+                institute: "Dhruv Tech",
+                since: "June 2018",
+                to: "",
+                description: "Post Graduate Diploma"
+            }, {
+                institute: "KLE College of Engineering & Technology Chikodi",
+                since: "2014",
+                to: "2018",
+                description: "Bachelor Degree with 57% Aggregate"
+            }, {
+                institute: "BK College of Chikodi",
+                since: "2013",
+                to: "2014",
+                description: "Higher secondary school certificate (XII) with 63.66%"
+            }, {
+                institute: "GSES English Medium College Chikodi",
+                since: "2011",
+                to: "2012",
+                description: "Higher secondary school certificate (XII) with 63.66%"
+            }],
+            milestones: [{
+                when: Date.UTC(2012, 9, 31),
+                what: "X",
+                howMuch: 6,
+                details: "with distinction"
+            }, {
+                when: Date.UTC(2014, 9, 31),
+                what: "XII",
+                howMuch: 5,
+                details: "still first class"
+            }, {
+                when: Date.UTC(2016, 3, 31),
+                what: "First Prize in Sports",
+                howMuch: 9,
+                details: "got selected in KSCST"
+            }, {
+                when: Date.UTC(2017, 2, 28),
+                what: "Mini Project",
+                howMuch: 8.5,
+                details: "got selected in KSCST"
+            }, {
+                when: Date.UTC(2017, 9, 29),
+                what: "Final Year Project",
+                howMuch: 8,
+                details: "got sponsership"
+            }, {
+                when: Date.UTC(2018, 4, 29),
+                what: "B E",
+                howMuch: 8.5,
+                details: "with first class"
+            }, {
+                when: Date.UTC(2018, 10, 29),
+                what: "First Job",
+                howMuch: 9.2,
+                details: "joined Dhruv Tech"
+            }]
+        }
