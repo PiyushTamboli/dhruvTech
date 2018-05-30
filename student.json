@@ -66,37 +66,37 @@
 		"description": "Higher secondary school certificate (XII) with 63.66%"
 	}],
 	"milestones": [{
-		"when": "Date.UTC(2012, 9, 31)",
+		"when": "2012-9",
 		"what": "X",
 		"howMuch": 6,
 		"details": "with distinction"
 	}, {
-		"when": "Date.UTC(2014, 9, 31)",
+		"when": "2014-9",
 		"what": "XII",
 		"howMuch": 5,
 		"details": "still first class"
 	}, {
-		"when": "Date.UTC(2016, 3, 31)",
+		"when": "2016-3",
 		"what": "First Prize in Sports",
 		"howMuch": 9,
 		"details": "got selected in KSCST"
 	}, {
-		"when": "Date.UTC(2017, 2, 28)",
+		"when": "2017-2",
 		"what": "Mini Project",
 		"howMuch": 8.5,
 		"details": "got selected in KSCST"
 	}, {
-		"when": "Date.UTC(2017, 9, 29)",
+		"when": "2017, 9, 29",
 		"what": "Final Year Project",
 		"howMuch": 8,
 		"details": "got sponsership"
 	}, {
-		"when": "Date.UTC(2018, 4, 29)",
+		"when": "2018, 4, 29",
 		"what": "B E",
 		"howMuch": 8.5,
 		"details": "with first class"
 	}, {
-		"when": "Date.UTC(2018, 10, 29)",
+		"when": "2018, 10, 29",
 		"what": "First Job",
 		"howMuch": 9.2,
 		"details": "joined Dhruv Tech"
