@@ -1,2 +1,11 @@
-{"A" : ["A", "B","C","D"],
-  "C" : ["A", "B","C","D"]}
+{
+  "cat" : ["caat", "cpt","cat","cate"],
+  "rat" : ["rat", "rut","rot","raat"],
+  "bat" : ["bate", "bat","bete","baat"],
+  "hat" : ["hat", "hute","rot","haat"],
+  "ran" : ["ret", "rune","ran","raan"],
+  "ram" : ["rom", "ruem","rem","raam"],
+  "pan" : ["pom", "poon","pene","pan"],
+  "pad" : ["pod", "pood","pad","paad"],
+  "pat" : ["pote", "pute","pat","paat"]
+}
