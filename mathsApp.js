@@ -2,17 +2,19 @@ var app = angular.module('mathsApp', [])
   .controller('mathsController', function($scope, $http, $location) {
     $scope.score = 0;
     $scope.attempts = 0;
-    $scope.problem = "A";
-    $scope.options= ["A", "B","C","D"];
-    $scope.paramValue = $location.search().operation;
-    var operation = ["+", "-"];
+    $scope.problem = "";
+    $scope.options= [];
+    var operation = $location.search().operation;
+    //var operation = ["+", "-"];
     var random =0;
     var result = 0;
-    random = Math.floor((Math.random() * 20) + 1);
+    var maxNumber =30;
+    random = Math.floor((Math.random() * maxNumber) + 1);
     var reset = function (){
-        random = Math.floor((Math.random() * 20) + 1);
-        var number1= Math.floor((Math.random() * 20) + 1);
-        var number2= Math.floor((Math.random() * 20) + 1);
+        $scope.options= ["A", "B","C","D"];
+        random = Math.floor((Math.random() * maxNumber) + 1);
+        var number1= Math.floor((Math.random() * maxNumber) + 1);
+        var number2= Math.floor((Math.random() * maxNumber) + 1);
         if(number1 < number2){
             var temp = number1;
             number1=number2;
@@ -26,7 +28,7 @@ var app = angular.module('mathsApp', [])
             $scope.problem = number1 + " - " + number2 + " = "
         }
         for (x in $scope.options) {
-            random = Math.floor((Math.random() * 20) + 1);
+            random = Math.floor((Math.random() * maxNumber) + 1);
             if ($scope.options.indexOf(random) === -1) {
                 $scope.options[x]= random;
             } else {
@@ -38,7 +40,7 @@ var app = angular.module('mathsApp', [])
         if ($scope.options.indexOf(result) === -1) {
             $scope.options[random]= result;
         }
-        console.log($scope.options);
+        //console.log($scope.options);
     };
     reset();
 
@@ -47,7 +49,6 @@ var app = angular.module('mathsApp', [])
         $scope.attempts++;
         if(a == result){
             $scope.score++;
-            $scope.options= ["A", "B","C","D"];
             reset();
         }
 
