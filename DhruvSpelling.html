@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="spellingApp">
+<title>Spelling App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+<script src="spellingApp.js"></script>
+<head>
+  <style>
+
+body {
+  background-color:#aaa;
+}
+.textArea {
+  	text-align: center;
+	vertical-align: middle;
+	line-height: 200px;
+	padding:10px
+}
+.textHeader {
+  	text-align: center;
+	vertical-align: middle;
+	line-height: 100px;
+	padding:10px
+
+}
+</style>
+</head>
+<body >
+<div class="w3-container" ng-controller="spellingController">
+  <div class="w3-row">
+    <div class="w3-col s12">
+      <div class="textHeader">Spot the correct spelling</div>
+    </div>
+  </div>
+  <div class="w3-row">
+    <div ng-repeat="item in spelling">
+      <button ng-click="myFunction(item)" class="w3-col s6 textArea">{{item}}</button>
+    </div>
+  </div>
+  <div class="w3-row">
+    <div class="w3-col s12">
+      <div class="textHeader">Your score is {{score}} out of {{attempts}}</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
